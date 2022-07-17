@@ -1,0 +1,11 @@
+<h1><%= @subscription.title %></h1>
+
+<p><%= @subscription.price %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_subscription_path(@subscription) %></li>
+  <li><%= link_to "Destroy", subscription_path(@subscription), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
