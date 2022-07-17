@@ -13,3 +13,74 @@
  *= require_tree .
  *= require_self
  */
+
+html,body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  background-color: #FCF2F5;
+}
+
+body {
+  padding: 20px;
+}
+
+.subscriptions--list {
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.subscriptions--list td {
+  padding: 15px 25px;
+  text-align: left;
+}
+
+.subscriptions--list th {
+  padding: 15px 25px;
+  text-align: left;
+  background-color: #FCFBFC;
+}
+
+.subscriptions--list td {
+  border-bottom: 2px solid #FCFBFC;
+}
+
+.form--container {
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 4px;
+}
+
+.input--container {
+  margin-bottom: 10px;
+}
+
+.input--container input {
+  width: calc(100% - 10px);
+  margin-top: 5px;
+  padding: 10px 5px;
+  background-color: #FCFBFC;
+  border: none;
+  border-bottom: 1px solid #E2E5E8;
+}
+
+.input--container select {
+  margin-top: 5px;
+  padding: 10px 10px 10px 3px;
+  background-color: #FCFBFC;
+  border: none; 
+  width: calc(100%);
+  border-bottom: 1px solid #E2E5E8;
+}
+
+.input--container input[type="submit"],
+.input--container input[type="submit" i] {
+  background: #FCF2F5;
+  cursor: pointer;
+  width: 175px;
+  border: 1px solid #FCF2F5;
+  border-radius: 4px;
+} 

@@ -1,5 +1,5 @@
-<%= form_with model: subscription do |form| %>
-  <div>
+<%= form_with(model: subscription, class: 'form--container') do |form| %>
+  <div class="input--container">
     <%= form.label :title %><br>
     <%= form.text_field :title %>
     <% subscription.errors.full_messages_for(:title).each do |message| %>
@@ -7,15 +7,46 @@
     <% end %>
   </div>
 
-  <div>
+  <div class="input--container">
     <%= form.label :price %><br>
-    <%= form.text_area :price %><br>
+    <%= form.text_field :price %><br>
     <% subscription.errors.full_messages_for(:price).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
-  <div>
+  <div class="input--container">
+    <%= form.label :date %><br>
+    <%= form.date_field :date %><br>
+    <% subscription.errors.full_messages_for(:date).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="input--container">
+    <%= form.label :url %><br>
+    <%= form.text_field :url %><br>
+    <% subscription.errors.full_messages_for(:url).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div class="input--container">
+    <%= form.label :interval %><br>
+    <%= form.select :interval, options_for_select(["weekly", "monthly", "yearly"]), :class => '' %>
+    <% subscription.errors.full_messages_for(:interval).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="input--container">
+    <%= form.label :active %><br>
+    <%= form.select :active, options_for_select(["true", "false"]), :class => '' %>
+    <% subscription.errors.full_messages_for(:active).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="input--container">
     <%= form.submit %>
   </div>
 <% end %>
